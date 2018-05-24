@@ -1,0 +1,86 @@
+
+#This is a test
+
+import time
+import sys
+import random
+import socket
+
+name = "BATMAN"
+
+print('#DISCLAIMER - YOU HAVE TO BE OLDER THAN 15 TO PLAY'
+      ' THIS GAME.')
+
+time.sleep(2)
+
+print('Hello, I am ' + socket.gethostname() + '.')
+time.sleep(1)
+# This is a pause
+print('What is your name?')
+# This is a pause
+myName = input()
+time.sleep(1.5)
+# This is a pause
+print('That is nice.')
+time.sleep(1)
+# This is a pause
+print('How old are you ' + myName + ' ?')
+myAge = input()
+myAge = int(myAge)
+
+time.sleep(0.5)
+
+if myAge >= 15:
+    print('You are old enough to play.')
+
+if myAge == 15:
+    print('You are old enough to play.')
+
+if myAge <= 15:
+    print('You are not old enough to play.')
+    sys.exit()
+    
+time.sleep(0.5)
+start = input( myName + ', would you like to play a game?')
+if start == 'yes' or start == 'Yes' or start == 'no' or start == 'No':
+    print('Lets begin this.')
+    
+time.sleep(2)
+#This is a pause
+
+number = random.randint(1, 20)
+
+guessesTaken = 0
+
+number = random.randint(1, 20)
+print('Well, ' + myName + ', I am thinking of a number between 1 and 20')
+
+time.sleep(0.5)
+
+while guessesTaken < 6:
+    print('Take a guess.') # Four spaces for new block
+    guess = input()
+    guess = int(guess)
+
+    guessesTaken = guessesTaken + 1
+
+    if guess < number:
+        print('Your guess is too low, ' + myName + ', Try Again') # There are eight spaces
+
+    if guess > number:
+        print('Your guess is too high, ' + myName + ', Try Again')
+
+    if guess == number:
+        break
+        
+time.sleep(1)
+#This is a pause
+
+if guess == number:
+    guessesTaken = str(guessesTaken)
+    print('Good Job, ' + myName + '! You guessed my number in ' + guessesTaken + ' guesses')
+
+time.sleep(1.5)
+#This is a pause
+
+    

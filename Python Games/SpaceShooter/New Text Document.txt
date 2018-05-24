@@ -1,0 +1,2 @@
+pyinstaller --onedir --add-data Data;Data Shooter.py
+

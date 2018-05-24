@@ -1,0 +1,28 @@
+PYTHON
+
+if you want new line  print('\n' * 5) # 5 new lines
+
+list :
+grocery_list = [] <---- always in block
+grocery list item 1 = 0
+
+example:
+grocery_list = ['Juice', 'Carrot']
+grocery_list = [0]
+
+--> Juice
+
+len --> length or amount of items in a list
+
+23:00 stopped
+
+-------------
+#this is to get pc host name
+import socket
+
+* socket.gethostname()
+
+#this is to get pc ip address
+import socket
+
+* print(socket.gethostbyname(socket.gethostname()))
